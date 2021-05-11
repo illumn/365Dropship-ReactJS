@@ -1,0 +1,16 @@
+.sidebar__wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sidebar {
+    background-color: var(--border-color);
+    height: 100%;
+    width: 270px;
+    position: fixed;
+  }
+  
+  .side-bar::-webkit-scrollbar {
+    display: none;
+  }
+  
