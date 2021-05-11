@@ -3,20 +3,18 @@ import "./header.css";
 const Header = ({ headerContent }) => {
   return (
     <header className="header">
-      <Button content={"Select All"} />
-      <div className="header__content">
-        <input
-          id="search"
-          className="search__input"
-          type="text"
-          placeholder="Search"
-        />
-        <button id="search__button" className="header__searchbtn" type="submit">
-          <i className="fas fa-search fa-rotate-90"></i>
-        </button>
-        <Button content={"Add to inventory"} />
-        <i className="far fa-question-circle header__questionmark"></i>
-      </div>
+     <div class="header__content">
+          <Button content={"Select All"}/>
+            <span class="header__selection">selected 0 out of 274,157 products</span>
+        </div>
+        <div class="header__content">
+            <input id="search" class="search__input" type="text" placeholder="Search" />
+            <button id="search__button" class="header__searchbtn" type="submit">
+                <i class="fas fa-search fa-rotate-90"></i>
+            </button>
+           <Button content={"add to inventory"}/>
+            <i class="far fa-question-circle header__questionmark"></i>
+        </div>
     </header>
   );
 };
