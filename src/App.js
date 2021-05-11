@@ -1,5 +1,4 @@
-import Header from "./Header/Header";
-import "./Header/Button.types"
+import Header from "./Components/Header/Header";
 import "./App.css";
 
 function App() {
