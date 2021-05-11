@@ -10,7 +10,7 @@
     position: fixed;
   }
   
-  .side-bar::-webkit-scrollbar {
+  .sidebar::-webkit-scrollbar {
     display: none;
   }
   
