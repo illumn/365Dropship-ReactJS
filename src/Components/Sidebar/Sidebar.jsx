@@ -1,10 +1,8 @@
-import "./sidebar.css"
+import "./sidebar.css";
 const Sidebar = () => {
   return (
     <div className="sidebar__wrapper">
-      <aside className="sidebar">
-          
-      </aside>
+      <aside className="sidebar"></aside>
     </div>
   );
 };

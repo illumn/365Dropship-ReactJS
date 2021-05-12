@@ -23,3 +23,9 @@ body {
   width: 100%;
   display: flex;
 }
+
+.content{
+  height: 100%;
+  padding-left: 270px;
+  width: 100%;
+}

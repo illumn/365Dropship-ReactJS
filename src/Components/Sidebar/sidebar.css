@@ -1,11 +1,11 @@
 .sidebar__wrapper {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .sidebar {
-    background-color: var(--border-color);
-    height: 100%;
-    width: 260px;
-    position: fixed;
-  }
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  background-color: var(--border-color);
+  height: 100%;
+  width: 260px;
+  position: fixed;
+}

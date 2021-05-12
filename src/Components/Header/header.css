@@ -1,5 +1,6 @@
 .content {
   height: var(--max-size);
+  width: var(--max-size);
   padding-left: 270px;
 }
 
@@ -37,10 +38,6 @@
   font-weight: 500;
 }
 
-
-
 .header__questionmark {
   font-size: 29px;
 }
-
-
