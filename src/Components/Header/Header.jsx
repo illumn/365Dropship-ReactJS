@@ -1,4 +1,4 @@
-import Button from "./Button.types";
+import Button from "./Button";
 import Sort from "./Sort";
 import Search from "./Search";
 import "./header.css";
