@@ -10,12 +10,11 @@ const Header = ({ headerContent }) => {
         <span class="header__selection">
           selected 0 out of 274,157 products
         </span>
-        <Sort />
+        <Sort/>
       </div>
       <div class="header__content">
         <Search />
         <Button content={"add to inventory"} />
-
         <i class="far fa-question-circle header__questionmark"></i>
       </div>
     </header>
