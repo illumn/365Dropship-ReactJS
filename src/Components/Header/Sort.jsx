@@ -6,8 +6,8 @@ const Sort = () => {
         <option>Sort By: New Arrivals</option>
         <option value="asc">Price: High To Low</option>
         <option value="desc">Price: Low To High</option>
-        <option value="desc">Profit: High To Low</option>
-        <option value="desc">Price: Low To High</option>
+        <option value="profitH">Profit: High To Low</option>
+        <option value="profitL">Profit: Low To High</option>
       </select>
     </div>
   );
