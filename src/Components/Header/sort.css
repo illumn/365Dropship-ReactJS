@@ -4,6 +4,9 @@
   background-color: var(--bg-color);
 }
 
+#icon{
+  color:#B6B9CA;
+}
 #sort {
   background-color: transparent;
   border: none;

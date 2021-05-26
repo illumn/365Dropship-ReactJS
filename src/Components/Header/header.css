@@ -1,8 +1,4 @@
-.content {
-  height: var(--max-size);
-  width: var(--max-size);
-  padding-left: 270px;
-}
+
 
 .header {
   background-color: var(--bg-color);

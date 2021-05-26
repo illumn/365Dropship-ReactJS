@@ -1,0 +1,31 @@
+.sidebar {
+  max-width: 270px;
+  width: 100%;
+  background-color: #ecedf5;
+  display: flex;
+}
+.sidebar__menu {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1000px) {
+  .sidebar {
+    display: none;
+  }
+}
+.sidebar_header {
+  background-color: #5d6b9f;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  width: 215px;
+  padding: 7px;
+}
+.sidebar_header--light {
+  background-color: #9da9d5;
+  height: 40px;
+  color: white;
+  font-weight: bold;
+  width: 215px;
+  padding: 7px;
+}
