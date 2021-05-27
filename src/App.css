@@ -11,11 +11,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   background-color: var(--bg-color);
   font-family: "Roboto", sans-serif;
+  
 }
 
 .app {
