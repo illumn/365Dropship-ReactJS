@@ -1,6 +1,7 @@
 *::-webkit-scrollbar {
   display: none;
 }
+
 .catalog {
   margin-top: 15px;
   height: 100vh;

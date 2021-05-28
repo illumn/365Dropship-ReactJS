@@ -20,12 +20,6 @@ body {
   
 }
 
-.app {
-  height: 100%;
-  width: 100%;
-  display: flex;
-}
-
 .content{
   height: 100%;
   padding-left: 270px;

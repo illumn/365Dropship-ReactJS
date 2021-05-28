@@ -2,15 +2,15 @@ import Header from "./Components/Header/Header";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import "./App.css";
 import Main from "./Components/Main/Main";
+import { useState, useEffect } from "react";
 
 function App() {
+  const[data, setData] = useState([]);
   return (
-    <div className="App">
+    <div className="content">
       <Sidebar />
-      <div className="content">
-        <Header />
-        <Main/>
-      </div>
+      <Header />
+      <Main />
     </div>
   );
 }

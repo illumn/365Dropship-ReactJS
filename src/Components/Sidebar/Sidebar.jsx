@@ -15,8 +15,13 @@ const Sidebar = () => {
       <nav className={"nav__container"}>
         <div>
           <a href="#" className={"nav__link"}>
-            <img src={dropship_logo} className={"dropshipLogo"} alt={"365Dropship Logo"}/>
+            <img
+              src={dropship_logo}
+              className={"dropshipLogo"}
+              alt={"365Dropship Logo"}
+            />
           </a>
+
           <div className={"nav__list"}>
             <div className={"nav__items"}>
               <a href="#" className={"nav__link"}>
@@ -26,7 +31,7 @@ const Sidebar = () => {
                 <img src={dashboard} />
               </a>
               <a href="#" className={"nav__link"}>
-                <img src={catalog} className={"red"}  />
+                <img src={catalog} />
               </a>
               <a href="#" className={"nav__link"}>
                 <img src={inventory} />

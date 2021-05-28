@@ -1,8 +1,10 @@
+import {useState} from 'react'
 import Button from "./Button";
 import Sort from "./Sort";
 import Search from "./Search";
 import "./header.css";
-const Header = ({ headerContent }) => {
+const Header = () => {
+  const[data, setData] = useState([]);
   return (
     <>
       <header className={"header"}>
@@ -18,10 +20,9 @@ const Header = ({ headerContent }) => {
           <i class="far fa-question-circle header__questionmark"></i>
         </div>
       </header>
-      <Sort />
+      {/* <Sort  data={data} setData={setData}/> */}
     </>
   );
 };
 
 export default Header;
-

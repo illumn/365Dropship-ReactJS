@@ -1,47 +1,35 @@
 import "./sort.css";
 const Sort = ({ data, setData }) => {
-  const sortAsc = (item) => {
-    item.sort((a, b) => a.price - b.price);
-    setData(item);
-  };
-
-  const sortDesc = (item) => {
-    item.sort((a, b) => b.price - a.price);
-    setData(item);
-  };
-
-  const sortA_Z = (item) => {
-    item.sort((a, b) => a.title.localeCompare(b.title));
-    setData(item);
-  };
-
-  const sortZ_A = (item) => {
-    item.sort((a, b) => b.title.localeCompare(a.title));
-    setData(item);
-  };
-
-  const Sorting = (value, item) => {
-    if (value == "asc") {
-      sortAsc(item);
-    } else if (value == "desc") {
-      sortDesc(item);
-    } else if (value == "A-Z") {
-      sortA_Z(item);
-    } else if (value == "Z-A") {
-      sortZ_A(item);
-    } else {
-      item = [""];
+  const SortItems = (e) => {
+    console.log(e.target.value);
+    if (e.target.value === "asc") {
+      data.sort((a, b) => a.price - b.price);
+      handleSort(data);
     }
-    setData(item);
+    if (e.target.value === "desc") {
+      data.sort((a, b) => b.price - a.price);
+      handleSort(data);
+    }
+    if (e.target.value === "A-Z") {
+      data.sort((a, b) => a.title.localeCompare(b.title));
+      handleSort(data);
+    }
+    if (e.target.value === "Z-A") {
+      data.sort((a, b) => b.title.localeCompare(a.title));
+      handleSort(data);
+    }
   };
 
-  const handleSort = (e) => {
-    let value = e.target.value;
-    Sorting(value, [...data]);
+  const handleSort = () => {
+    setData(
+      data.map((product) => {
+        return product;
+      })
+    );
   };
 
   return (
-    <div className="sort__section" onChange={handleSort}>
+    <div className="sort__section" onChange={SortItems}>
       <i class="fas fa-sort-amount-up-alt" id="icon"></i>
       <select id="sort">
         <option value="default">New Arrivals</option>
