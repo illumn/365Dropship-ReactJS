@@ -1,20 +1,27 @@
 import "./search.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Search = ({ setData, allData }) => {
-  const [searchInput, setSearchInput] = useState();
-  const handleSearch = (e) => {
+
+const Search = ({
+  allData,
+  setData,
+  searchInput,
+  setSearchInput,
+  result,
+  setResult
+}) => {
+  const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
-
-  const Searching = () => {
-    let filtered = allData.filter((products) =>
-      products.title.toLowerCase().includes(searchInput.toLowerCase())
-    );
-    setData(filtered);
+  const search = () => {
+    setResult(searchInput);
   };
-
-
+  useEffect(() => {
+    const res = allData.filter((e) => {
+      return e.title.toLowerCase().includes(searchInput.toLowerCase());
+    });
+    setData(res);
+  }, [result]);
 
   return (
     <div classNameName={"search__content"}>
@@ -24,13 +31,13 @@ const Search = ({ setData, allData }) => {
         type={"text"}
         placeholder={"Search"}
         value={searchInput}
-        onChange={handleSearch}
+        onChange={handleChange}
       />
       <button
         id={"search__button"}
         className={"header__searchbtn"}
         type={"submit"}
-        onClick={Searching}
+        onClick={search}
       >
         <i className="fas fa-search fa-rotate-90"></i>
       </button>

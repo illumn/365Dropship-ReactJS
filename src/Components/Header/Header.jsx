@@ -1,10 +1,16 @@
-import {useState} from 'react'
 import Button from "./Button";
-import Sort from "./Sort";
 import Search from "./Search";
 import "./header.css";
-const Header = () => {
-  const[data, setData] = useState([]);
+const Header = ({
+  data,
+  setData,
+  allData,
+  setAllData,
+  searchInput,
+  setSearchInput,
+  result,
+  setResult,
+}) => {
   return (
     <>
       <header className={"header"}>
@@ -15,12 +21,20 @@ const Header = () => {
           </span>
         </div>
         <div className={"header__content"}>
-          <Search />
+          <Search
+            data={data}
+            setData={setData}
+            allData={allData}
+            setAllData={setAllData}
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
+            result={result}
+            setResult={setResult}
+          />
           <Button content={"add to inventory"} />
           <i class="far fa-question-circle header__questionmark"></i>
         </div>
       </header>
-      {/* <Sort  data={data} setData={setData}/> */}
     </>
   );
 };

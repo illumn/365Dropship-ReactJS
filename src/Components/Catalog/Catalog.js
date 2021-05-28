@@ -3,9 +3,7 @@ import "./catalog.css";
 import CatalogProduct from "./CatalogProduct";
 import Sort from "../Header/Sort";
 
-const Catalog = () => {
-  const [data, setData] = useState([]);
-  const [alldata, setAllData] = useState([]);
+const Catalog = ({ data, setData, allData, setAllData }) => {
   const getProducts = async () => {
     const request = await fetch("https://fakestoreapi.com/products");
     return request.json();
@@ -13,6 +11,7 @@ const Catalog = () => {
   useEffect(() => {
     getProducts().then((response) => {
       setData(response);
+      setAllData(response);
     });
   }, []);
   return (
