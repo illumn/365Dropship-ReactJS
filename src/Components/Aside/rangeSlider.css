@@ -27,8 +27,8 @@
   display: flex;
   justify-content: space-between;
 }
-.amount-from__wrapper,
-.amount-to__wrapper {
+.price-from__wrapper,
+.price-to__wrapper {
   display: flex;
 }
 .range-slider__symbol {
@@ -42,7 +42,7 @@
   border-right: 1px solid #ccd1d4;
 }
 
-.range-slider__amount {
+.range-slider__scope {
   margin-top: 10px;
   display: flex;
   justify-content: center;
@@ -51,11 +51,11 @@
   height: 25px;
   background-color: #ffff;
 }
-.amount,
+.scope,
 .symbol {
   font-size: 16px;
   color: #ccd1d4;
 }
-.amount {
+.scope {
   color: #8e98a0;
 }
