@@ -2,10 +2,10 @@ import Button from "./Button";
 import Search from "./Search";
 import "./header.css";
 const Header = ({
-  data,
-  setData,
-  allData,
-  setAllData,
+  products,
+  setProducts,
+  allProducts,
+  setAllProducts,
   searchInput,
   setSearchInput,
   result,
@@ -22,10 +22,10 @@ const Header = ({
         </div>
         <div className={"header__content"}>
           <Search
-            data={data}
-            setData={setData}
-            allData={allData}
-            setAllData={setAllData}
+            products={products}
+            setProducts={setProducts}
+            allProducts={allProducts}
+            setAllProducts={setAllProducts}
             searchInput={searchInput}
             setSearchInput={setSearchInput}
             result={result}

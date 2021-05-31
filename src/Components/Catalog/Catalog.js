@@ -3,24 +3,24 @@ import "./catalog.css";
 import CatalogProduct from "./CatalogProduct";
 import Sort from "../Header/Sort";
 
-const Catalog = ({ data, setData, allData, setAllData }) => {
+const Catalog = ({ products, setProducts, allProducts, setAllProducts }) => {
   const getProducts = async () => {
     const request = await fetch("https://fakestoreapi.com/products");
     return request.json();
   };
   useEffect(() => {
     getProducts().then((response) => {
-      setData(response);
-      setAllData(response);
+      setProducts(response);
+      setAllProducts(response);
     });
   }, []);
   return (
     <>
       <div className="goddamnsort">
-        <Sort data={data} setData={setData} />
+        <Sort products={products} setProducts={setProducts} />
       </div>
       <section className="catalog">
-        {data.map((product) => (
+        {products.map((product) => (
           <CatalogProduct
             price={product.price}
             title={product.title}

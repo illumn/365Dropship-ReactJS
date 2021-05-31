@@ -7,6 +7,7 @@ import transactions from "./assets/transactions.svg";
 import storesList from "./assets/storesList.svg";
 import profile from "./assets/profile.jpg";
 import dropship_logo from "./assets/dropship_logo.png";
+import Aside from "../Aside/Aside"
 import "./sidebar.css";
 
 const Sidebar = () => {
@@ -14,7 +15,7 @@ const Sidebar = () => {
     <div className={"nav"} id={"navbar"}>
       <nav className={"nav__container"}>
         <div>
-          <a href="#" className={"nav__link"}>
+          <a href="index.html" className={"nav__link"}>
             <img
               src={dropship_logo}
               className={"dropshipLogo"}
@@ -52,7 +53,9 @@ const Sidebar = () => {
           </div>
         </div>
       </nav>
+     
     </div>
+    
   );
 };
 

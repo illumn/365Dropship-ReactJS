@@ -2,14 +2,14 @@ import "./main.css";
 import { useState, useEffect } from "react";
 import Catalog from "../Catalog/Catalog";
 
-const Main = ({ data, setData, allData, setAllData }) => {
+const Main = ({ products, setProducts, allProducts, setAllProducts }) => {
   return (
     <main className="main">
       <Catalog
-        data={data}
-        setData={setData}
-        allData={allData}
-        setAllData={setAllData}
+        products={products}
+        setProducts={setProducts}
+        allProducts={allProducts}
+        setAllProducts={setAllProducts}
       />
     </main>
   );

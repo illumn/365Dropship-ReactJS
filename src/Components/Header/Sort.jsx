@@ -1,28 +1,28 @@
 import "./sort.css";
-const Sort = ({ data, setData }) => {
+const Sort = ({ products, setProducts }) => {
   const SortItems = (e) => {
     console.log(e.target.value);
     if (e.target.value === "asc") {
-      data.sort((a, b) => a.price - b.price);
-      handleSort(data);
+      products.sort((a, b) => a.price - b.price);
+      handleSort(products);
     }
     if (e.target.value === "desc") {
-      data.sort((a, b) => b.price - a.price);
-      handleSort(data);
+      products.sort((a, b) => b.price - a.price);
+      handleSort(products);
     }
     if (e.target.value === "A-Z") {
-      data.sort((a, b) => a.title.localeCompare(b.title));
-      handleSort(data);
+      products.sort((a, b) => a.title.localeCompare(b.title));
+      handleSort(products);
     }
     if (e.target.value === "Z-A") {
-      data.sort((a, b) => b.title.localeCompare(a.title));
-      handleSort(data);
+      products.sort((a, b) => b.title.localeCompare(a.title));
+      handleSort(products);
     }
   };
 
   const handleSort = () => {
-    setData(
-      data.map((product) => {
+    setProducts(
+      products.map((product) => {
         return product;
       })
     );

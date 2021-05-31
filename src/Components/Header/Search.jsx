@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 
 const Search = ({
-  allData,
-  setData,
+  allProducts,
+  setProducts,
   searchInput,
   setSearchInput,
   result,
@@ -17,10 +17,10 @@ const Search = ({
     setResult(searchInput);
   };
   useEffect(() => {
-    const res = allData.filter((e) => {
+    const res = allProducts.filter((e) => {
       return e.title.toLowerCase().includes(searchInput.toLowerCase());
     });
-    setData(res);
+    setProducts(res);
   }, [result]);
 
   return (
