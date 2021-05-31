@@ -1,9 +1,6 @@
+import "./button.css";
 const Button = ({ content }) => {
-  return (
-    <div className="header__content">
-      <button className="header__selectAll">{content}</button>
-    </div>
-  );
+  return <button className="mainButton">{content}</button>;
 };
 
 export default Button;

@@ -1,20 +1,19 @@
 import "./search.css";
 import { useState, useEffect } from "react";
 
-
 const Search = ({
   allProducts,
   setProducts,
   searchInput,
   setSearchInput,
   searchResult,
-  setSearchResult
+  setSearchResult,
 }) => {
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
   const search = () => {
-   setSearchResult(searchInput);
+    setSearchResult(searchInput);
   };
   const handleEnter = (e) => {
     if (e.keyCode === 13) {
