@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Catalog from "../Catalog/Catalog";
 
 const Main = ({ products, setProducts, allProducts, setAllProducts }) => {
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  
   return (
     <main className="main">
       <Catalog

@@ -1,13 +1,13 @@
-const CatalogProduct = ({ image, title, price }) => {
-    return (
-      <div className="catalog__product">
-        <div className="catalog__photo">
-          <img src={image} />
-        </div>
-        <div className="catalog__title">{title}</div>
-        
-        <div className="catalog__prices">{price}$</div>
+const CatalogProduct = ({ image, title, price, openModal, id }) => {
+  return (
+    <div className="catalog__product" id={id} onClick={openModal}>
+      <div className="catalog__photo">
+        <img src={image} id={id} />
       </div>
-    );
-  };
-  export default CatalogProduct;
+      <div className="catalog__title" id={id}>{title}</div>
+      
+      <div className="catalog__prices" id={id}>{price}$</div>
+    </div>
+  );
+};
+export default CatalogProduct;

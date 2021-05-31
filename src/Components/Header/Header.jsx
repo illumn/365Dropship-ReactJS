@@ -22,6 +22,7 @@ const Header = ({
         </div>
         <div className={"header__content"}>
           <Search
+          
             products={products}
             setProducts={setProducts}
             allProducts={allProducts}
