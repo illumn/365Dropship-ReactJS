@@ -8,8 +8,8 @@ const Header = ({
   setAllProducts,
   searchInput,
   setSearchInput,
-  result,
-  setResult,
+  searchResult,
+  setSearchResult,
 }) => {
   return (
     <>
@@ -28,8 +28,8 @@ const Header = ({
             setAllProducts={setAllProducts}
             searchInput={searchInput}
             setSearchInput={setSearchInput}
-            result={result}
-            setResult={setResult}
+            searchResult={searchResult}
+            setSearchResult={setSearchResult}
           />
           <Button content={"add to inventory"} />
           <i class="far fa-question-circle header__questionmark"></i>

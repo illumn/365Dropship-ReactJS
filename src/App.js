@@ -8,13 +8,13 @@ function App() {
   const [products, setProducts] = useState([]);
   const [allProducts, setAllProducts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
-  const [result, setResult] = useState("");
+  const [searchResult, setSearchResult] = useState("");
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   return (
     <div className="content">
       <Sidebar />
       <Aside />
-
       <Header
         products={products}
         setProducts={setProducts}
@@ -22,8 +22,8 @@ function App() {
         setAllProducts={setAllProducts}
         searchInput={searchInput}
         setSearchInput={setSearchInput}
-        result={result}
-        setResult={setResult}
+        searchResult={searchResult}
+        setSearchResult={setSearchResult}
       />
       <Main
         products={products}

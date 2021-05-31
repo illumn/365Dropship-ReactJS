@@ -7,21 +7,28 @@ const Search = ({
   setProducts,
   searchInput,
   setSearchInput,
-  result,
-  setResult
+  searchResult,
+  setSearchResult
 }) => {
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
   const search = () => {
-    setResult(searchInput);
+   setSearchResult(searchInput);
   };
+  const handleEnter = (e) => {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      setSearchResult(e.target.value);
+    }
+  };
+
   useEffect(() => {
     const res = allProducts.filter((e) => {
       return e.title.toLowerCase().includes(searchInput.toLowerCase());
     });
     setProducts(res);
-  }, [result]);
+  }, [searchResult]);
 
   return (
     <div classNameName={"search__content"}>
@@ -32,6 +39,7 @@ const Search = ({
         placeholder={"Search"}
         value={searchInput}
         onChange={handleChange}
+        onKeyDown={handleEnter}
       />
       <button
         id={"search__button"}
