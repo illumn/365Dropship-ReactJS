@@ -11,6 +11,7 @@ const Search = ({
 }) => {
   const handleChange = (e) => {
     setSearchInput(e.target.value);
+    
   };
   const search = () => {
     setSearchResult(searchInput);
@@ -19,12 +20,14 @@ const Search = ({
     if (e.keyCode === 13) {
       e.preventDefault();
       setSearchResult(e.target.value);
+      
     }
   };
 
   useEffect(() => {
     const res = fetchedProducts.filter((e) => {
       return e.title.toLowerCase().includes(searchInput.toLowerCase());
+      
     });
     setProducts(res);
   }, [searchResult]);

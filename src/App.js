@@ -10,7 +10,6 @@ function App() {
   const [fetchedProducts,setFetchedProducts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [searchResult, setSearchResult] = useState("");
-
   const [selectedProducts, setSelectedProducts] = useState([]);
 
  

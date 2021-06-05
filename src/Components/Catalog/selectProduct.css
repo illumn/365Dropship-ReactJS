@@ -9,3 +9,11 @@
     padding: 10px;
     position: absolute;
 }
+.catalog__product:hover .catalog__head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px;
+    position: absolute;
+}
+

@@ -27,16 +27,9 @@
 }
 .catalog__product:hover {
   border: 2px solid #61d4df;
-}
-.catalog__product--border {
-  border: 2px solid #61d4df;
-}
-.catalog__product--border {
   box-shadow: 0 0 0 1px #61d5df;
 }
-.catalog__product:hover {
-  box-shadow: 0 0 0 1px #61d5df;
-}
+
 .catalog__img {
   height: 170px;
   display: flex;
@@ -57,18 +50,22 @@
 }
 
 .catalog__prices {
-  padding: 10px 14px;
   border-top: 1px solid #e4e5ec;
-  font-size: 14px;
-  color: #47506e;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .catalog__product:hover .catalog__head {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+  position: absolute;
 }
 
-
+.border {
+  height: 18px;
+  border: 1px solid rgb(228, 222, 222);
+}

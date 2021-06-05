@@ -23,7 +23,7 @@ const Catalog = ({
     });
   }, []);
 
-  // const [modal, setModal] = useState(null);
+  const [modal, setModal] = useState(null);
 
   // const openModal = (e) => {
   //   setModal(

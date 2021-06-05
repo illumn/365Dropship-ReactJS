@@ -10,3 +10,4 @@ const SelectProduct = ({catalogSelected, handleCatalogSelect}) => {
     )
 }
 export  default SelectProduct;
+
