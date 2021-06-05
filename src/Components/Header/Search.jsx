@@ -2,7 +2,7 @@ import "./search.css";
 import { useState, useEffect } from "react";
 
 const Search = ({
-  allProducts,
+  fetchedProducts,
   setProducts,
   searchInput,
   setSearchInput,
@@ -23,7 +23,7 @@ const Search = ({
   };
 
   useEffect(() => {
-    const res = allProducts.filter((e) => {
+    const res = fetchedProducts.filter((e) => {
       return e.title.toLowerCase().includes(searchInput.toLowerCase());
     });
     setProducts(res);

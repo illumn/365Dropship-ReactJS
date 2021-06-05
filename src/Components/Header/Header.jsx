@@ -4,8 +4,8 @@ import "./header.css";
 const Header = ({
   products,
   setProducts,
-  allProducts,
-  setAllProducts,
+  fetchedProducts,
+  setFetchedProducts,
   searchInput,
   setSearchInput,
   searchResult,
@@ -22,11 +22,10 @@ const Header = ({
         </div>
         <div className={"header__content"}>
           <Search
-          
             products={products}
             setProducts={setProducts}
-            allProducts={allProducts}
-            setAllProducts={setAllProducts}
+            fetchedProducts={fetchedProducts}
+            setFetchedProducts={setFetchedProducts}
             searchInput={searchInput}
             setSearchInput={setSearchInput}
             searchResult={searchResult}

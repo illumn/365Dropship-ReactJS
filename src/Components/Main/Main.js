@@ -2,16 +2,15 @@ import "./main.css";
 import { useState, useEffect } from "react";
 import Catalog from "../Catalog/Catalog";
 
-const Main = ({ products, setProducts, allProducts, setAllProducts }) => {
-  const [selectedProducts, setSelectedProducts] = useState([]);
+const Main = ({ products, setProducts, FetchedProducts, setFetchedProducts }) => {
   
   return (
     <main className="main">
       <Catalog
         products={products}
         setProducts={setProducts}
-        allProducts={allProducts}
-        setAllProducts={setAllProducts}
+        FetchedProducts={FetchedProducts}
+        setFetchedProducts={setFetchedProducts}
       />
     </main>
   );

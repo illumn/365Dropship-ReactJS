@@ -1,13 +1,12 @@
-.modal__left {
+.modal__left-side {
   padding: 15px 35px 35px 35px;
   display: flex;
   flex: 350px 1;
-
   flex-direction: column;
   align-items: center;
 }
 
-.modal__right {
+.modal__right-side {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -18,7 +17,7 @@
   height: 500px;
 }
 
-.Modal__Wrap {
+.Modal__Wrapper {
   position: absolute;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -30,10 +29,8 @@
   min-height: 700px;
 }
 
-.Modal__Wrap img {
+.Modal__Wrapper img {
   margin-top: 50px;
-  /* width: 100%;
-    height: auto; */
   max-width: 400px;
   max-height: 400px;
 }
@@ -74,17 +71,6 @@
   font-weight: bold;
 }
 
-.Close__Icon {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  cursor: pointer;
-}
-
-.Close__Icon:hover {
-  color: #61d5df;
-}
-
 .Modal_Background {
   position: fixed;
   left: 55px;
@@ -108,7 +94,7 @@
   color: #61d5df;
 }
 
-.Modal__Box {
+.Modal__container {
   position: absolute;
   top: 50%;
   width: 95vw;

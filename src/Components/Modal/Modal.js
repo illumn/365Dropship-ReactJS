@@ -1,17 +1,17 @@
 import "./modal.css";
-const Modal = ({modal, closeModal }) => {
+const Modal = ({ modal, closeModal }) => {
   return (
     <div className={"Modal"}>
-      <div className={"Modal__Box"}>
-        <div className={"Modal__Wrap"}>
-          <div className={"modal__left"}>
+      <div className={"Modal__container"}>
+        <div className={"Modal__Wrapper"}>
+          <div className={"modal__left-side"}>
             <div className={"modal__left-header"}>
               <div>
                 <p>$20</p>
                 <p>RRP</p>
               </div>
               <div>
-                <p>${modal[0].price}</p>
+                <p>{modal[0].price}</p>
                 <p>COST</p>
               </div>
               <div className={"modal__profit"}>
@@ -24,7 +24,7 @@ const Modal = ({modal, closeModal }) => {
             </div>
           </div>
 
-          <div className={"modal__right"}>
+          <div className={"modal__right-side"}>
             <div className={"modal__supplier"}>
               <p>SKU# bgb-s0724578 COPY</p>
               <p className={"modal__supplier-details"}>
@@ -43,7 +43,6 @@ const Modal = ({modal, closeModal }) => {
               </div>
             </div>
           </div>
-          
         </div>
       </div>
       <div className={"Modal_Background"} onClick={closeModal}></div>

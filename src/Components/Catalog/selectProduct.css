@@ -1,0 +1,11 @@
+.catalog__head {
+    display: none;
+    position: relative;
+}
+.catalog__head--active {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+}
