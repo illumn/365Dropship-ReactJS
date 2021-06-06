@@ -1,44 +1,48 @@
+import { useState, useEffect } from "react";
 import SelectProduct from "./SelectProduct";
 
 const CatalogProduct = ({
+  idArray,
+  id,
   image,
   title,
   price,
-  openModal,
-  handleSelect,
-  handleOpen,
-  id,
-  selected,
+  setIdArray,
 }) => {
-  const handleCheckbox = () => {
-    handleSelect({ id });
-  };
+  const [selected, setselected] = useState(false);
 
-  const hadleProductClick = () => {
-    handleOpen({ id, image, title, price });
+  const Changed = (event) => {
+    setselected(event.target.checked);
+
+    setIdArray((prev) => {
+      const foundId = prev.find((product) => product === id);
+      if (foundId) {
+        const newArr = prev.filter((product) => product !== id);
+        return newArr;
+      } else {
+        return [...prev, id];
+      }
+    });
   };
+  useEffect(() => {
+    const isFound = idArray.find((product) => product == id);
+    setselected(isFound);
+  }, [idArray]);
 
   return (
     <div
       className={`catalog__product ${
-        selected ? "catalog__product--border" : ""
+        selected ? `catalog__product--border` : ""
       }`}
-      onClick={openModal}
     >
-      <SelectProduct
-        catalogSelected={selected}
-        handleCatalogSelect={handleCheckbox}
-      />
-      <div className="catalog__img">
-        <img src={image} alt="" />
+      <SelectProduct isClicked={selected} checkboxChange={Changed} />
+        <div className="catalog__photo">
+          <img src={image} />
+        </div>
+        <div className="catalog__title">{title}</div>
+        <div className="catalog__prices">{price}$</div>
       </div>
-      <div className="catalog__title">{title}</div>
-      <div className="catalog__prices">
-        $60 RRP <span className="border"></span>
-        {price}$<span className="border"></span>
-        $60 RRP
-      </div>
-    </div>
+ 
   );
 };
 export default CatalogProduct;

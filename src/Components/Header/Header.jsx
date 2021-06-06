@@ -10,6 +10,8 @@ const Header = ({
   setSearchInput,
   searchResult,
   setSearchResult,
+  selectedCount,
+  count,
 }) => {
   return (
     <>
@@ -17,7 +19,7 @@ const Header = ({
         <div className={"header__content"}>
           <Button content={"Select All"} />
           <span className={"header__selection"}>
-            selected 0 out of 274,157 products
+            {`selected ${selectedCount} out of ${count} products`}
           </span>
         </div>
         <div className={"header__content"}>

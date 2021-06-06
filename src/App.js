@@ -7,18 +7,15 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [fetchedProducts,setFetchedProducts] = useState([]);
+  const [fetchedProducts, setFetchedProducts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [searchResult, setSearchResult] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]);
-
- 
 
   return (
     <div className="content">
       <Sidebar />
       <Aside />
-      
       <Header
         products={products}
         setProducts={setProducts}
@@ -28,6 +25,9 @@ function App() {
         setSearchInput={setSearchInput}
         searchResult={searchResult}
         setSearchResult={setSearchResult}
+        selectedCount={selectedProducts.length}
+        count={products.length}
+
       />
       <Main
         products={products}
