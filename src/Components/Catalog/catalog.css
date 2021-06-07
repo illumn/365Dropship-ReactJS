@@ -12,7 +12,7 @@
 }
 
 .catalog__product {
-  height: 290px;
+  height: 300px;
   flex: 1 292px;
   max-width: 292px;
   background-color: white;
@@ -36,6 +36,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top:-62px;
 }
 
 .catalog__img img {
@@ -52,8 +53,8 @@
   border-top: 1px solid #e4e5ec;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
- height:20px;
+justify-content: space-evenly;
+ height:40px;
 }
 
 
