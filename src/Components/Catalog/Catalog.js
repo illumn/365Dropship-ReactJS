@@ -21,6 +21,7 @@ const Catalog = ({
     getProducts().then((response) => {
       setProducts(response);
       setFetchedProducts(response);
+      localStorage.setItem("products", JSON.stringify(response));
     });
   }, []);
   const [productModal, setProductModal] = useState(null);

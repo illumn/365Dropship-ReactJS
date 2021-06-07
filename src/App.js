@@ -23,7 +23,6 @@ function App() {
     <div className="content">
       <Sidebar />
       <Aside />
-
       <Header
         products={products}
         setProducts={setProducts}
