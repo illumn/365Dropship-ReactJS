@@ -5,12 +5,21 @@ const Checkbox = ({
   handleCheckboxChange,
   handleCheckbox,
   isChecked,
+  id,
 }) => {
   return (
-    <label className="catalog__checkbox" onClick={handleCheckbox}>
-      <input type="checkbox" onChange={handleCheckbox} checked={isChecked} />
-      <span className="catalog__checkmark" />
-    </label>
+    <div className="catalog__checkbox">
+      <label htmlFor={id}>
+        <input
+          className="catalog__checkbox-item catalog__checkbox-item--default"
+          type="checkbox"
+          onChange={handleCheckbox}
+          id={id}
+          checked={isChecked}
+        />
+        <div className="catalog__checkbox-item catalog__checkbox-item--custom"></div>
+      </label>
+    </div>
   );
 };
 

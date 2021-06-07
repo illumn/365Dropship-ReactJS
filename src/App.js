@@ -15,6 +15,9 @@ function App() {
   const sellectAllProducts = () => {
     setSelectedProducts(products.map((product) => product.id));
   };
+  const unselectAll = () => {
+    setSelectedProducts([])
+  }
 
   return (
     <div className="content">
@@ -32,6 +35,7 @@ function App() {
         setSearchResult={setSearchResult}
         selectedProducts={selectedProducts}
         sellectAllProducts={sellectAllProducts}
+        unselectAll={unselectAll}
       />
       <Main
         products={products}

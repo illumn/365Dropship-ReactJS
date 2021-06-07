@@ -21,7 +21,7 @@ const SelectProduct = ({
         id={id}
         isChecked={selectedProducts.includes(id)}
       />
-      <Button content="add to inventory" />
+      <Button content="add to inventory" className={"addToInventory--hover"}/>
     </div>
   );
 };

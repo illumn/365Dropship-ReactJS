@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Search from "./Search";
 import "./header.css";
+import SelectProduct from "../Catalog/SelectProduct";
 const Header = ({
   products,
   setProducts,
@@ -12,18 +13,22 @@ const Header = ({
   setSearchResult,
   selectedProducts,
   setSelectedProducts,
-  sellectAllProducts
+  sellectAllProducts,
+  unselectAll
 }) => {
   return (
     <>
       <header className={"header"}>
         <div className={"header__content"}>
           <div className="header__select" onClick={sellectAllProducts}>
-          <Button content={"Select All"} />
+          <Button content={"Select All"} className={'selectall'}/>
           </div>
           <span className={"header__selection"}>
-            selected {selectedProducts.length} out of 274,157 products
+            selected {selectedProducts.length} out of {products.length} products
           </span>
+          <div className="unselect" onClick={unselectAll}>
+          {selectedProducts.length ? <Button content={"Clear All"} className={'clearall'}/> : null}
+          </div>
         </div>
         <div className={"header__content"}>
           <Search
@@ -36,7 +41,8 @@ const Header = ({
             searchResult={searchResult}
             setSearchResult={setSearchResult}
           />
-          <Button content={"add to inventory"} />
+          <Button content={"add to inventory"} className={"addToInventory--main"} />
+          
           <i className="far fa-question-circle header__questionmark"></i>
         </div>
       </header>

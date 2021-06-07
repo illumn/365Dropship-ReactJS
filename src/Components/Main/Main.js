@@ -9,6 +9,7 @@ const Main = ({
   setFetchedProducts,
   selectedProducts,
   setSelectedProducts,
+  unselectAll
 }) => {
   return (
     <main className="main">
@@ -19,6 +20,7 @@ const Main = ({
         setFetchedProducts={setFetchedProducts}
         selectedProducts={selectedProducts}
         setSelectedProducts={setSelectedProducts}
+        unselectAll={unselectAll}
       />
     </main>
   );

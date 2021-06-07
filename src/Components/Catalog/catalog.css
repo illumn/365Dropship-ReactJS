@@ -46,24 +46,17 @@
 .catalog__title {
   font-size: 14px;
   color: #29304b;
-  padding: 0 14px;
 }
 
 .catalog__prices {
   border-top: 1px solid #e4e5ec;
-  height: 30px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+ height:20px;
 }
 
-.catalog__product:hover .catalog__head {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-  position: absolute;
-}
+
 
 .border {
   height: 18px;
