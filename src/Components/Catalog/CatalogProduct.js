@@ -1,48 +1,51 @@
-import { useState, useEffect } from "react";
 import SelectProduct from "./SelectProduct";
 
 const CatalogProduct = ({
-  idArray,
-  id,
   image,
   title,
   price,
-  setIdArray,
+  openModal,
+  selectedProducts,
+  setSelectedProducts,
+  handleOpen,
+  id,
+  selected,
 }) => {
-  const [selected, setselected] = useState(false);
-
-  const Changed = (event) => {
-    setselected(event.target.checked);
-
-    setIdArray((prev) => {
-      const foundId = prev.find((product) => product === id);
-      if (foundId) {
-        const newArr = prev.filter((product) => product !== id);
-        return newArr;
-      } else {
-        return [...prev, id];
-      }
-    });
+  const handleCheckbox = () => {
+    setSelectedProducts([id, ...selectedProducts]);
+    if (selectedProducts.includes(id)) {
+      setSelectedProducts(selectedProducts.filter((item) => item !== id));
+    }
   };
-  useEffect(() => {
-    const isFound = idArray.find((product) => product == id);
-    setselected(isFound);
-  }, [idArray]);
+  console.log(selectedProducts);
+  const hadleProductClick = () => {
+    handleOpen({ id, image, title, price });
+  };
 
   return (
     <div
       className={`catalog__product ${
-        selected ? `catalog__product--border` : ""
+        selectedProducts.includes(id) ? "catalog__product--border" : ""
       }`}
+      onClick={openModal}
     >
-      <SelectProduct isClicked={selected} checkboxChange={Changed} />
-        <div className="catalog__photo">
-          <img src={image} />
-        </div>
-        <div className="catalog__title">{title}</div>
-        <div className="catalog__prices">{price}$</div>
+      <SelectProduct
+        catalogSelected={selected}
+        handleCatalogSelect={handleCheckbox}
+        handleCheckbox={handleCheckbox}
+        selectedProducts={selectedProducts}
+        id={id}
+      />
+      <div className="catalog__img">
+        <img src={image} alt="" />
       </div>
- 
+      <div className="catalog__title">{title}</div>
+      <div className="catalog__prices">
+        $60 RRP <span className="border"></span>
+        {price}$<span className="border"></span>
+        $60 RRP
+      </div>
+    </div>
   );
 };
 export default CatalogProduct;

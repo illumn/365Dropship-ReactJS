@@ -1,35 +1,18 @@
-.catalog__checkbox,
-.catalog__inventory-button {
+.catalog__head {
   display: none;
+  position: relative;
 }
-.catalog__select-active {
+.catalog__head--active {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 10px;
   position: absolute;
 }
-.catalog__product:hover .catalog__checkbox,
-.catalog__product:hover .catalog__inventory-button {
-  display: block;
-}
-
-.catalog__checkbox--clicked {
-  display: block;
-}
-
-.catalog__product {
-  position: relative;
-}
-
-.catalog__checkbox {
+.catalog__product:hover .catalog__head {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 14px;
   position: absolute;
-  top: 10px;
-  left: 10px;
-}
-
-.catalog__inventory-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }

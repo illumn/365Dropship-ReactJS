@@ -10,16 +10,19 @@ const Header = ({
   setSearchInput,
   searchResult,
   setSearchResult,
-  selectedCount,
-  count,
+  selectedProducts,
+  setSelectedProducts,
+  sellectAllProducts
 }) => {
   return (
     <>
       <header className={"header"}>
         <div className={"header__content"}>
+          <div className="header__select" onClick={sellectAllProducts}>
           <Button content={"Select All"} />
+          </div>
           <span className={"header__selection"}>
-            {`selected ${selectedCount} out of ${count} products`}
+            selected {selectedProducts.length} out of 274,157 products
           </span>
         </div>
         <div className={"header__content"}>
@@ -34,7 +37,7 @@ const Header = ({
             setSearchResult={setSearchResult}
           />
           <Button content={"add to inventory"} />
-          <i class="far fa-question-circle header__questionmark"></i>
+          <i className="far fa-question-circle header__questionmark"></i>
         </div>
       </header>
     </>

@@ -12,10 +12,15 @@ function App() {
   const [searchResult, setSearchResult] = useState("");
   const [selectedProducts, setSelectedProducts] = useState([]);
 
+  const sellectAllProducts = () => {
+    setSelectedProducts(products.map((product) => product.id));
+  };
+
   return (
     <div className="content">
       <Sidebar />
       <Aside />
+
       <Header
         products={products}
         setProducts={setProducts}
@@ -25,15 +30,16 @@ function App() {
         setSearchInput={setSearchInput}
         searchResult={searchResult}
         setSearchResult={setSearchResult}
-        selectedCount={selectedProducts.length}
-        count={products.length}
-
+        selectedProducts={selectedProducts}
+        sellectAllProducts={sellectAllProducts}
       />
       <Main
         products={products}
         setProducts={setProducts}
         fetchedProducts={fetchedProducts}
         setFetchedProducts={setFetchedProducts}
+        selectedProducts={selectedProducts}
+        setSelectedProducts={setSelectedProducts}
       />
     </div>
   );

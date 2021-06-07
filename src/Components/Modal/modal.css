@@ -1,4 +1,4 @@
-.modal__left-side {
+.modal__left {
   padding: 15px 35px 35px 35px;
   display: flex;
   flex: 350px 1;
@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.modal__right-side {
+.modal__right {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -17,7 +17,22 @@
   height: 500px;
 }
 
-.Modal__Wrapper {
+@media screen and (max-width: 950px) {
+  .modal {
+      width: 100%;
+      min-height: 100%;
+      background-color: rgb(255, 255, 255);
+      top: 0;
+      right: 0%;
+      z-index: 3;
+      display: flex;
+      align-items: flex-start;
+      border-radius: 10px;
+      flex-wrap: wrap;
+  }
+}
+
+.modal {
   position: absolute;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -29,11 +44,19 @@
   min-height: 700px;
 }
 
-.Modal__Wrapper img {
+.modal img {
   margin-top: 50px;
+  /* width: 100%;
+  height: auto; */
   max-width: 400px;
   max-height: 400px;
 }
+
+/* .modal__image {
+height: 300px;
+background-color: red;
+overflow: hidden;
+} */
 
 .modal__left-header {
   border-radius: 5px;
@@ -70,8 +93,11 @@
   cursor: pointer;
   font-weight: bold;
 }
+.Close_Icon {
+  cursor: pointer;
+}
 
-.Modal_Background {
+.tint {
   position: fixed;
   left: 55px;
   width: calc(100% - 55px);
@@ -80,6 +106,22 @@
   z-index: 1;
   top: 0;
   background-color: #5d6b9f;
+}
+
+@media screen and (max-width: 1070px) {
+  .tint {
+      width: 100%;
+      left: 0;
+  }
+}
+
+.fa-times:hover {
+  color: #61d5df;
+}
+.fa-times {
+  position: absolute;
+  right: 10px;
+  top: 5px;
 }
 
 .modal__left-header :nth-child(2) :last-child {
@@ -94,7 +136,7 @@
   color: #61d5df;
 }
 
-.Modal__container {
+#modal-wraper {
   position: absolute;
   top: 50%;
   width: 95vw;

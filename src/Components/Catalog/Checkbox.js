@@ -1,9 +1,14 @@
 import "./checkbox.css";
 
-const Checkbox = ({isClicked, checkboxChange }) => {
+const Checkbox = ({
+  checked,
+  handleCheckboxChange,
+  handleCheckbox,
+  isChecked,
+}) => {
   return (
-    <label className="catalog__checkbox-container">
-      <input checked={isClicked} type="checkbox" onChange={checkboxChange} />
+    <label className="catalog__checkbox" onClick={handleCheckbox}>
+      <input type="checkbox" onChange={handleCheckbox} checked={isChecked} />
       <span className="catalog__checkmark" />
     </label>
   );

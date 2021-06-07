@@ -7,18 +7,18 @@ const Main = ({
   setProducts,
   FetchedProducts,
   setFetchedProducts,
+  selectedProducts,
+  setSelectedProducts,
 }) => {
-  const [idArray, setIdArray] = useState([]);
-
   return (
     <main className="main">
       <Catalog
-        idArray={idArray}
-        setIdArray={setIdArray}
         products={products}
         setProducts={setProducts}
         FetchedProducts={FetchedProducts}
         setFetchedProducts={setFetchedProducts}
+        selectedProducts={selectedProducts}
+        setSelectedProducts={setSelectedProducts}
       />
     </main>
   );

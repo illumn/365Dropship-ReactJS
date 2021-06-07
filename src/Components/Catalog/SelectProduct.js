@@ -1,19 +1,27 @@
 import "./selectProduct.css";
 import Checkbox from "./Checkbox";
 import Button from "../Header/Button";
-const SelectProduct = ({ checkboxChange, isClicked }) => {
+const SelectProduct = ({
+  catalogSelected,
+  handleCatalogSelect,
+  handleCheckbox,
+  selectedProducts,
+  id,
+}) => {
   return (
-    <div className={`catalog__select`}>
-      <div
-        className={`catalog__checkbox ${
-          isClicked && "catalog__checkbox--clicked"
-        }`}
-      >
-        <Checkbox checkboxChange={checkboxChange} isClicked={isClicked} />
-      </div>
-      <div className="catalog__inventory-button">
-        <Button content="Add to Inventory" />
-      </div>
+    <div
+      className={`catalog__head ${
+        catalogSelected ? "catalog__head--active" : ""
+      }`}
+    >
+      <Checkbox
+        checked={catalogSelected}
+        handleCheckboxChange={handleCatalogSelect}
+        handleCheckbox={handleCheckbox}
+        id={id}
+        isChecked={selectedProducts.includes(id)}
+      />
+      <Button content="add to inventory" />
     </div>
   );
 };
