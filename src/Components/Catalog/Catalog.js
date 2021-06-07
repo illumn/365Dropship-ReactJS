@@ -11,6 +11,7 @@ const Catalog = ({
   setFetchedProducts,
   selectedProducts,
   setSelectedProducts,
+  description
 }) => {
   const getProducts = async () => {
     const request = await fetch("https://fakestoreapi.com/products");
@@ -22,7 +23,7 @@ const Catalog = ({
       setFetchedProducts(response);
     });
   }, []);
-  const [modal, setModal] = useState(null);
+  const [productModal, setProductModal] = useState(null);
 
   // const openModal = (e) => {
   //   setModal(
@@ -35,7 +36,13 @@ const Catalog = ({
   // const closeModal = () => {
   //   setModal(null);
   // };
+  const handleOpen = (products) => {
+    setProductModal(products);
+}
 
+const handleClose = () => {
+    setProductModal(null);
+}
   return (
     <>
       <div className="sortt">
@@ -53,8 +60,11 @@ const Catalog = ({
             selectedProducts={selectedProducts}
             setSelectedProducts={setSelectedProducts}
             key={product.id}
+            handleOpen={handleOpen}
+            description={product.description}
           />
         ))}
+        {productModal && <Modal product={productModal} handleClose={handleClose}/>}
       </section>
     </>
   );

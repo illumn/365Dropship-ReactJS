@@ -10,6 +10,8 @@ const CatalogProduct = ({
   handleOpen,
   id,
   selected,
+  description
+
 }) => {
   const handleCheckbox = () => {
     setSelectedProducts([id, ...selectedProducts]);
@@ -18,10 +20,10 @@ const CatalogProduct = ({
     }
   };
   console.log(selectedProducts);
-  const hadleProductClick = () => {
-    handleOpen({ id, image, title, price });
-  };
 
+  const productClicked = () => {
+    handleOpen({id, image, title, price,description})
+}
   return (
     <div
       className={`catalog__product ${
@@ -36,7 +38,7 @@ const CatalogProduct = ({
         selectedProducts={selectedProducts}
         id={id}
       />
-      <div className="catalog__img">
+      <div className="catalog__img" onClick={productClicked}>
         <img src={image} alt="" />
       </div>
       <div className="catalog__title">{title}</div>
