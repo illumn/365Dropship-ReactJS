@@ -42,7 +42,6 @@ const Header = ({
             setSearchResult={setSearchResult}
           />
           <Button content={"add to inventory"} className={"addToInventory--main"} />
-          
           <i className="far fa-question-circle header__questionmark"></i>
         </div>
       </header>

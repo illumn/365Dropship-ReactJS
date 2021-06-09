@@ -1,7 +1,6 @@
 *::-webkit-scrollbar {
   display: none;
 }
-
 .catalog {
   margin-top: 15px;
   height: 100vh;
@@ -10,7 +9,6 @@
   justify-content: center;
   gap: 10px;
 }
-
 .catalog__product {
   height: 300px;
   flex: 1 292px;
@@ -56,9 +54,6 @@
   justify-content: space-evenly;
   height:30px;
 }
-
-
-
 .border {
   height: 18px;
   border: 1px solid rgb(228, 222, 222);

@@ -26,17 +26,6 @@ const Catalog = ({
   }, []);
   const [productModal, setProductModal] = useState(null);
 
-  // const openModal = (e) => {
-  //   setModal(
-  //     products.filter((product) => {
-  //       return Number(product.id) === Number(e.target.id);
-  //     })
-  //   );
-  // };
-
-  // const closeModal = () => {
-  //   setModal(null);
-  // };
   const handleOpen = (products) => {
     setProductModal(products);
 }
@@ -46,8 +35,7 @@ const handleClose = () => {
 }
   return (
     <>
-      <div className="sortt">
-        {/* {modal !== null && <Modal modal={modal} closeModal={closeModal} />} */}
+      <div className="sort">
         <Sort products={products} setProducts={setProducts} />
       </div>
       <section className="catalog">

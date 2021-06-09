@@ -4,6 +4,7 @@ const CatalogProduct = ({
   image,
   title,
   price,
+  product,
   openModal,
   selectedProducts,
   setSelectedProducts,
